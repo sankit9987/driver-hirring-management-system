@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Driver Service: Hire Professional Drivers Online</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/themes/splide-skyblue.min.css" />
+            
+</head>
+{% url 'register'  as the_url %}
+{% url 'Login'  as url %}
+{% if request.get_full_path == the_url  or request.get_full_path == url%}
+<body style="background: linear-gradient(135deg, #71b7e6, #9b59b6); font-family: 'Poppins',sans-serif;">
+
+{% else %}
+<body>
+    {% endif %}
+    <header class="d-flex justify-content-between">
+        <div class="logo">
+            <h1>Driver<span class="mint_font">Go</span></h1>
+        </div>
+        <div class="menu-box">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#drivers">Drivers</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                {% if not request.user.is_authenticated %}
+                <li><a href="{% url 'Login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                {% else %}
+                {% if request.user.is_superuser %}
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                {% elif request.user.is_driver%}
+                <li><a href="{% url 'driver_dashboard' %}">Dashboard</a></li>
+                {% else %}
+                <li><a href="#Login/Register">Dashboard</a></li>
+                {% endif %}
+                <li><a href="{% url 'user_logout' %}">Logout</a></li>
+                
+                {% endif %}
+            </ul>
+        </div>
+        
+        <div class="burger-div">
+            <button>
+                Menu
+            </button>
+        </div>
+    </header>
+    
+{% block body %}{% endblock body %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('#home');
+    splide.mount();
+});
+</script>
+
+<script>
+// Testimonial
+
+var swiper = new Swiper(".mySwiper", {
+//   loop: true,
+spaceBetween: 10,
+slidesPerView: 6,
+freeMode: true,
+watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+loop: true,
+spaceBetween: 10,
+effect: "fade",
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev",
+},
+thumbs: {
+swiper: swiper,
+},
+});
+
+if (window.matchMedia('(max-width: 768px)').matches) {
+var swiper = new Swiper(".mySwiper", {
+loop: "true",
+spaceBetween: 30,
+effect: "fade",
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev",
+},
+pagination: {
+el: ".swiper-pagination",
+clickable: true,
+},
+thumbs: {
+swiper: swiper,
+},
+});
+}
+</script>
+</body>
+
+</html>

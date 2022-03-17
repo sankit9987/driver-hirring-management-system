@@ -1,0 +1,29 @@
+{% extends 'driver/base.html' %}
+{% block body %}
+
+<div class="height-100 bg-light" style="padding-top: 6rem!important;">
+    <table id="geniustable55" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Sr No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile No</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for book in  book %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{book.first_name}}</td>
+            <td>{{book.address}}</td>
+            <td>{{book.email}}</td>
+            <td>{{book.mobile_no}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock body %}

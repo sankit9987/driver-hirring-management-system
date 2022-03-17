@@ -1,0 +1,29 @@
+{% extends 'Head/base.html' %}
+{% block body %}
+
+<div class="height-100 bg-light" style="padding-top: 6rem!important;">
+    <table id="geniustable55" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Sr No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile No</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for user in  user %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{user.first_name}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.mobile_no}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock body %}

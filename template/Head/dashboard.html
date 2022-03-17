@@ -1,0 +1,45 @@
+{% extends 'HEad/base.html' %}
+{% block body %}
+
+<div class="height-100 bg-light" style="padding-top: 1rem!important;">
+    <div class="col-lg-11 col-xl-12">
+        <div class="row my-5">
+            <div class="col-lg-3 m-4 col-xl-3 bg-dark d-flex" style="height:40vh;     background-image: linear-gradient(to right, #f85108, #f4ad3c); box-shadow: 2px 2px 5px rgb(0 0 0 / 30%) !important;"> 
+                <div style="padding: 36px 12%;     color: white;
+                font-size: 20px;">
+                    Total Booking!<br>
+                    <p style="font-size: 40px;">{{room}}</p>
+                    <p><a href="#" class="btn btn-light text-dark">View All</a></p>
+                </div>
+                <div  style="padding: 36px 0%;" >
+                <i class="fa fa-home" style="font-size:59px; color:white;" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 m-4 col-xl-3 bg-dark d-flex" style="height:40vh;     background-image: linear-gradient(to right, #129021, #1ed41e); box-shadow: 2px 2px 5px rgb(0 0 0 / 30%) !important;"> 
+                <div style="padding: 36px 12%;     color: white;
+                font-size: 20px;">
+                    Total Driver!<br>
+                    <p style="font-size: 40px;">{{booking}}</p>
+                    <p><a href="#" class="btn btn-light text-dark">View All</a></p>
+                </div>
+                <div  style="padding: 36px 0%;" >
+                <i class="fa fa-address-book" style="font-size:59px; color:white;" aria-hidden="true"></i>
+                </div>
+            </div>
+            
+    
+            <div class="col-lg-3 col-xl-3 bg-dark d-flex m-4" style="height:40vh;         background-image: linear-gradient(to right, #5a49e9, #7a6cf0);; box-shadow: 2px 2px 5px rgb(0 0 0 / 30%) !important;"> 
+                <div style="padding: 36px 12%;     color: white;
+                font-size: 20px;">
+                    Total Customer!<br>
+                    <p style="font-size: 40px;">{{student}}</p>
+                    <p><a href="#" class="btn btn-light text-dark">View All</a></p>
+                </div>
+                <div  style="padding: 36px 0%;" >
+                <i class="fa fa-user" style="font-size:59px; color:white;" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+</div>
+
+{% endblock body %}

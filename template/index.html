@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+{% if messages %}
+    <div id="alert" class="alert" role="alert">
+        {% for msg in messages %}
+        <h3 class="alert-heading">{{msg}}</h3>
+        {% endfor %}
+      </div>
+      {% endif %}
+    <div id="home" class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <h2>Get Car Drivers, Anywhere, Anytime  <br> in Seconds!</h2>
+                    <a href="javascript:void(0)"></a>
+                </li>
+                <li class="splide__slide">
+                    <h2>Let your long journeys<br>be pleasant and relaxing.
+                    </h2>
+                    <a href="javascript:void(0)">Let us Drive!</a>
+                </li>
+                <li class="splide__slide">
+                    <h2>Back and fro,<br>a lot to go?</h2>
+                    <a href="javascript:void(0)">Save up on hourly rates with our packages!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Hero -->
+
+    <!-- Feautures -->
+
+    <div id="features" class="features_sections">
+        <div class="feat_sec">
+            <img src="https://www.driveu.in/static/web/v4/images/catch-drive.jpg" alt="">
+            <h2>Catch a drive quick</h2>
+            <p>Just key in your location and assess the kind of trip you’d like to take. We show the fare estimate and allocate a driver from our wide network of well–trained drivers spread across cities at every kilometre. Like a flash, our drivers will appear in a matter of minutes to DriveU to your destination safely.</p>
+        </div>
+        <div class="feat_sec">
+            <img src="https://www.driveu.in/static/web/v4/images/tracking.jpg" alt="">
+            <h2>Real-time Tracking</h2>
+            <p>Keep your driver in sight as he reaches your pick-up location, so you don’t waste time calling and checking their current location. Share your whereabouts with your friends and family to update them about your location while you’re riding with our live tracking feature.</p>
+        </div>
+        <div class="feat_sec">
+            <img src="https://www.driveu.in/static/web/v4/images/insurance.jpg" alt="">
+            <h2>Chauffeur Secure</h2>
+            <p>While our expert drivers believe in safe driving, accidents can happen even to the best of drivers. With DriveU Secure, now you can insure your drive from unwanted mishaps, while we insure our drivers for all trips. Get an accident & hospitalization cover for passengers & vehicle damage cover for as little as ₹10 per trip.</p>
+        </div>
+    </div>
+
+    <!-- Feautures -->
+
+
+    <!-- Drivers -->
+    <div id="drivers" class="drivers_section">
+        <div class="city_drivers driver_section">
+            <div class="city_driver_img">
+                <img src="https://www.enterprise.co.uk/content/dam/ecom/nav/nav-rent-weekend-special-uk.jpg.wrend.480.270.jpeg" alt="">
+            </div>
+            <div class="city_driver_content">
+                <h2>City Drivers</h2>
+                <p>Whether you need to go for your weekly grocery shopping trips, pick kids from school or are looking for a relaxed ride back home or to a business meeting, we have you covered. Our drivers across the city would love to chauffeur you from wherever you are. So, let our drivers deal with the traffic, the signals or traffic rules, while you enjoy your ride.</p>
+                <a href="javascript:void(0)">Book Now</a>
+            </div>
+        </div>
+        <div class="outstation_drivers driver_section">
+            <div class="outstation_driver_img">
+                <img src="https://www.enterprise.co.uk/content/dam/ecom/utilitarian/emea/about/about-us-locations-winding-road.jpg.wrend.480.270.jpeg" alt="">
+            </div>
+            <div class="outstation_driver_content">
+                <h2>Outstation Drivers</h2>
+                <p>Why wait for a long weekend for a relaxing trip to your favourite getaway? Let the pressure of driving long distances, safety and taking care of the route be on our gentle chauffeur. Let your retreat start while you’re on the road instead of when you reach your destination.</p>
+                <a href="javascript:void(0)">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Drivers -->
+
+
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="main-client">
+        <!-- Swiper -->
+
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+            class="swiper mySwiper2 client_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="client_review">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_review">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_review">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_review">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_review">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_review">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper client_swiper_peg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0068/7610/2727/files/1_e6f3ef83-3815-4723-b104-9614763cdb3f_300x.png?v=1626331366" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0068/7610/2727/files/2_f59e59c6-9401-4c4f-bd8e-a9dcc1faaa66_300x.png?v=1626331366" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0068/7610/2727/files/3_f3e99019-82ee-48d3-8c53-7548e096f7d8_300x.png?v=1626331366" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0068/7610/2727/files/4_e90ee9ca-907d-463f-aa59-92ff49e9950f_300x.png?v=1626331366" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0068/7610/2727/files/5_7e2e4194-29d2-44dd-befe-4df596c41808_300x.png?v=1626331366" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://cdn.shopify.com/s/files/1/0068/7610/2727/files/6_300x.png?v=1626331651" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Testimonials -->
+
+
+
+
+    <!-- Contact Us -->
+    <div id="contact-us" class="contact-us-section">
+        <div class="contact-us-image">
+            <img src="{% static 'img/contact_us_img.svg' %}" alt="Contact Us">
+        </div>
+        <div class="contact-us-form">
+            <h2 style="padding-bottom: 2rem;">Contact Us</h2>
+            <form>
+                <input required type="text" placeholder="Your Name" name="c_name">
+                <input required type="tel" placeholder="Your Mobile No" name="c_mobile_no">
+                <input required type="email" placeholder="Your Email ID" name="c_email">
+                <textarea required name="c_msg" placeholder="Your Message" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <!-- Contact Us -->
+
+
+
+    <!-- Top Footer -->
+   
+        </div>
+    </div>
+    <!-- Top Footer -->
+
+    {% endblock body %}

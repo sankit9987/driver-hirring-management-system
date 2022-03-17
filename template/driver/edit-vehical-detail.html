@@ -1,0 +1,59 @@
+{% extends 'driver/base.html' %}
+{% block body %}
+
+<div class="height-100 bg-light" style="padding-top: 6rem!important;">
+    <div class="container pb-5">
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Vehical Details</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method='post' enctype=multipart/form-data>
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Vehicle Image</label><br>
+                                <img src="{{data.vehical_image.url}}" style="    width: 22%;
+                                " alt="">
+                            </div>
+                            <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Vehicle Number</label>
+                            <input type="text" value="{{data.vehical_no}}" readonly name="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name"  class="form-label">Owner Name</label>
+                                <input type="text" value="{{data.owner_name}}" name="name" class="form-control" readonly id="name" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact" class="form-label">Owner Contact Number</label>
+                                <input type="number" value="{{data.contact}}" name="contact" class="form-control" id="contact" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="number" value="{{data.price}}" name="price" class="form-control" id="price" aria-describedby="emailHelp">
+                            </div>
+        
+                            <div class="mb-3">
+                                <label for="vehicle" class="form-label">Vehicle Type</label>
+                                <select name="vehicle_type" id="vehicle" class="form-control" disabled >
+                                    <option value="Small">{{data.vehical_type}}</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="driver" class="form-label">Driver Type</label>
+                                <select name="driver_type" id="driver" class="form-control" disabled>
+                                    <option value="incity">{{data.travel_type}}</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+</div>
+{% endblock body %}

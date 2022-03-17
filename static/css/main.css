@@ -1,0 +1,471 @@
+/* Magic Mint  : #A5F0C5 */
+/* MInt FOnt : #537863 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto Condensed;
+}
+#alert{
+    background-color: rgb(61, 214, 61);
+    color: white;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, span{
+    margin: 0;
+}
+
+.magic_mint{
+    color: #A5F0C5;
+}
+
+.mint_font {
+    color: #37AC6E;
+}
+
+.logo h1 {
+    color: #161616;
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0px 0px 14px -10px #161616;
+    align-items: center;
+    padding: 0rem 2rem;
+    background: #fff;
+    height: 10vh;
+}
+
+.burger-div {
+    width: 2rem;
+    position: relative;
+    display: none;
+}
+
+/* .burger-lines {
+    height: 2px;
+    background: #537863;
+    margin-bottom: 0.5rem;
+} */
+
+.burger-div button {
+    /* position: absolute; */
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #37AC6E;
+    font-size: 1rem;
+}
+
+.menu-box ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-box ul li a {
+    color: #161616;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.menu-box ul li a:hover {
+    color: #37AC6E;
+}
+
+.open-menu-box {
+    position: absolute;
+    background: #161616;
+    top: 10vh;
+    left: 0px;
+    width: 100%;
+    display: grid !important;
+    z-index: 1;
+}
+
+.features_sections {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.feat_sec h2, .feat_sec img {
+    padding-bottom: 1rem;
+} 
+
+.feat_sec img {
+    width: 5rem;
+}
+
+.features_sections {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: url(slider_bg_white.jpg);
+    height: 100vh;
+    align-items: center;
+}
+
+
+div#drivers {
+    display: grid;
+    grid-template-columns: auto;
+    position: relative;
+}
+
+div#drivers img {
+    width: 100%;
+}
+
+.driver_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.outstation_driver_img {
+    order: 2;
+}
+
+.driver_section h2, .driver_section p {
+    padding-bottom: 2rem !important;
+}
+
+
+.driver_section a {
+    background: #37ac6e;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.contact-us-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* background: yellowgreen; */
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.contact-us-form form input, .contact-us-form form textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #37ac6e;
+    outline: none;
+    font-family: Roboto Condensed;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.contact-us-form form {
+    display: grid;
+    gap: 2rem;
+}
+
+.contact-us-form form input[type="submit"] {
+    background: #37ac6e;
+    padding: 1rem 2rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.top-footer-section {
+    display: grid;
+    background: yellowgreen;
+    grid-template-columns: 50% 50%;
+    padding: 4rem 2rem;
+}
+
+@media screen and (max-width:1024px) {
+    .burger-div{
+        display: block;
+    }
+    .menu-box {
+        display: none;
+    }
+    .logo, .burger-div {
+        width: 100%;
+    }
+    .burger-div {
+        display: grid;
+        justify-content: flex-end;
+    }
+    .menu-box ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-box ul li {
+        padding: 1rem 0;
+    }
+    .menu-box ul li a {
+        color: #37AC6E;
+    }
+    div#features {
+        grid-template-columns: auto;
+        height: auto;
+    }
+    .driver_section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .outstation_driver_img {
+        order: initial;
+    }
+    div#contact-us {
+        grid-template-columns: 100%;
+    }
+    .top-footer-section {
+        grid-template-columns: 100%;
+        text-align: left;
+        gap: 2rem;
+    }
+}
+
+
+.footer_links {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.top-footer-section {
+    display: grid;
+    background: #000;
+    grid-template-columns: 50% 50%;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.useful_links, .cities_footer {
+    display: grid;
+    gap: 1rem;
+}
+
+.top-footer-section {
+    display: grid;
+    background: #000;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+}
+
+.top-footer-section h4 {
+    border-bottom: 1px solid;
+    padding-bottom: 1rem;
+}
+
+
+
+
+
+/* Slider CSS */
+
+.splide__slide {
+    /* background: yellow; */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    flex-direction: column;
+}
+
+    .splide__arrow svg {
+        fill: #37AC6E !important;
+    }
+
+    .splide__pagination__page.is-active {
+        background: #37AC6E !important;
+    }
+
+    li#home-slide01 {
+        background: linear-gradient(45deg, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(https://www.betterteam.com/images/driver-job-description-5558x3706-2020123.jpeg);
+    }
+
+    li#home-slide02 {
+        background: linear-gradient(45deg, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(https://www.volvotrucks.com/content/dam/volvo-trucks/markets/master/home/services-updates/driver-support/driver-development/driver-support-steering-wheel.jpg);
+    }
+
+    li#home-slide03 {
+        background: linear-gradient(45deg, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(https://s3-us-west-1.amazonaws.com/metromile-www-assets/wp-content/uploads/2018/06/04174904/20-Tips-for-Becoming-a-Safer-Driver.jpeg);
+    }
+
+
+    .splide__slide h2 {
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .splide__slide a {
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 2rem;
+        background: #37AC6E;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+    
+
+
+
+
+
+
+
+
+
+    /* Testimonial */
+    .main-client {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background: #EFEFEF;
+        padding: 4rem 0rem;
+    }
+    
+        .main-client .swiper-slide {
+            background: #efefef;
+        }
+    
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+    
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        /* body {
+            background: #000;
+            color: #000;
+        } */
+    
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .mySwiper2 {
+            height: 80%;
+            width: 100%;
+        }
+    
+        .mySwiper {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+    
+        .mySwiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+    
+        .mySwiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+    
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
+    
+        .main-client .swiper-slide.swiper-slide-visible img {
+            object-fit: contain;
+            cursor: pointer;
+        }
+    
+        .client_review {
+            padding: 0 4rem;
+        }
+    
+        .client_swiper_peg {
+            height: 20vh;
+        }
+    
+        @media screen and (max-width:768px) {
+    
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: block;
+                color: #161616;
+            }
+    
+            .client_swiper_peg {
+        height: 10vh;
+    }
+        }
