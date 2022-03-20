@@ -44,7 +44,10 @@ class contact_us(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-
+typ = (
+    ('incity','incity'),
+    ('outstation','outstation'),
+)
 class Vehical(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     vehical_image = models.ImageField(upload_to='vehical')
@@ -53,7 +56,7 @@ class Vehical(models.Model):
     contact = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
     vehical_type = models.CharField(max_length=100)
-    travel_type = models.CharField(max_length=100)
+    travel_type = models.CharField(max_length=100,choices=typ)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
  

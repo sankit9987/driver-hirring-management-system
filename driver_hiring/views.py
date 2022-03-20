@@ -10,8 +10,9 @@ def index(request):
 def vehicle(request):
     return render(request,"all-driver.html")
 
-def books(request):
-    return render(request,"book.html")
+def books(request,id):
+    v = Vehical.objects.get(id=id)
+    return render(request,"book.html",{'v':v})
 
 def register(request):
     if not request.user.is_authenticated:
@@ -68,14 +69,19 @@ def Login(request):
     else:
         return redirect("index")
 
-
+def my_booking(request):
+    b = Booking.objects.filter(user = request.user)
+    return render(request, "book.html",{'b':b})
 def user_logout(request):
     logout(request)
     return redirect("index")
 
 
 def dashboard(request):
-    return render(request, "Head/dashboard.html")
+    customer = User.objects.filter(is_customer=True).count()
+    driver = User.objects.filter(is_driver=True).count()
+    b = Booking.objects.all().count()
+    return render(request, "Head/dashboard.html",{'customer':customer,'driver':driver,'b':b})
 
 
 def customer(request):
@@ -96,7 +102,7 @@ def booking(request):
 
 
 def add_vehical_detail(request):
-    data = Vehical.objects.filter(user=request.user)
+    data = Vehical.objects.get(user=request.user)
     if data:
         return render(request, "driver/edit-vehical-detail.html",{'data':data})
     else:
@@ -145,7 +151,35 @@ def edit_vehical_detail(request):
 
 def book(request):
     b = Booking.objects.filter(user=request.user)
-    return render(request, "Head/view_custome.html")
+    return render(request, "driver/booking.html",{'b':b})
 
 def driver_dashboard(request):
-    return render(request,"driver/dashboard.html")
+    b = Booking.objects.filter(user = request.user).count()
+    return render(request,"driver/dashboard.html",{'b':b})
+
+def city(request):
+    if request.user.is_authenticated:
+        if request.method=='POST':
+            driver = request.POST['driver']
+            driver = Vehical.objects.get(id=driver)
+            Booking.objects.create(user = request.user,vehical=driver)
+            return redirect("index")
+    else:
+        return redirect("Login")
+    vehical  = Vehical.objects.filter(travel_type="incity")
+    return render(request, "city.html",{'v':vehical})
+
+def out_station(request):
+    if request.user.is_authenticated:
+        if request.method=='POST':
+            driver = request.POST['driver']
+            driver = Vehical.objects.get(id=driver)
+            Booking.objects.create(user = request.user,vehical=driver)
+            return redirect("index")
+    else:
+        return redirect("Login")
+    vehical  = Vehical.objects.filter(travel_type="outstation")
+
+    return render(request, "outstaion.html",{'v':vehical})
+
+

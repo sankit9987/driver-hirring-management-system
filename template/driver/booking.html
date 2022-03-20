@@ -13,13 +13,13 @@
           </tr>
         </thead>
         <tbody>
-            {% for book in  book %}
+            {% for book in  b %}
           <tr>
             <th scope="row">{{forloop.counter}}</th>
-            <td>{{book.first_name}}</td>
+            <td>{{book.user.first_name}}</td>
             <td>{{book.address}}</td>
-            <td>{{book.email}}</td>
-            <td>{{book.mobile_no}}</td>
+            <td>{{book.user.email}}</td>
+            <td>{{book.user.mobile_no}}</td>
           </tr>
           {% endfor %}
         </tbody>

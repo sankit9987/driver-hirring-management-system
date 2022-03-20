@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/form.css' %}">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bookin.css' %}">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet"
@@ -29,7 +31,7 @@
         </div>
         <div class="menu-box">
             <ul>
-                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a  href="{% url 'index' %}">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#drivers">Drivers</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
@@ -74,6 +76,8 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <script>
+    const card = document.querySelectorAll('.card')
+        VanillaTilt.init(card);
 // Testimonial
 
 var swiper = new Swiper(".mySwiper", {

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sr No.</th>
+        <th scope="col">Driver Name</th>
+        <th scope="col">Driver Contact No.</th>
+        <th scope="col">Vehicle Type</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for b in b %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{b.vehical.owner_name}}</td>
+        <td>{{b.vehical.contact}}</td>
+        <td>{{b.vehical.vehical_type}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock body %}

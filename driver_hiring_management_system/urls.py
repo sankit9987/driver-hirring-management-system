@@ -12,6 +12,9 @@ urlpatterns = [
     path('register', views.register,name="register"),
     path('user_logout', views.user_logout,name="user_logout"),
     path('login', views.Login,name="Login"),
+    path('in-city', views.city,name="city"),
+    path('out-station', views.out_station,name="out_station"),
+    path('my-booking', views.my_booking,name="my_booking"),
 
     # Admin URL
     path('dashboard', views.dashboard,name="dashboard"),
