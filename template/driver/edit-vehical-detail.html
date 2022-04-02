@@ -9,6 +9,7 @@
                     <div class="card-header">
                         <h3>Vehical Details</h3>
                     </div>
+                    {% for data in data %}
                     <div class="card-body">
                         <form action="" method='post' enctype=multipart/form-data>
                             {% csrf_token %}
@@ -50,6 +51,7 @@
                             <button type="submit" class="btn btn-primary">Update</button>
                         </form>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

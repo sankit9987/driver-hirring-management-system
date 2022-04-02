@@ -1,5 +1,5 @@
 body {font-family: Arial, Helvetica, sans-serif;}
-            form {border: 3px solid #f1f1f1;}
+            
             
             input[type=text], input[type=password] {
               width: 100%;
@@ -59,3 +59,25 @@ body {font-family: Arial, Helvetica, sans-serif;}
                  width: 100%;
               }
             }
+
+
+            #id_email{
+              height: 2rem;
+              margin-top: 1.5em;
+              width: 100%;  
+            }
+            /* #id_new_password1{
+              display: none;
+            }
+            #id_new_password2{
+              display: none;
+            } */
+            #submit{
+              padding: 0.7em;
+              width: 100%;
+              background-color: #0f730f;
+              color: white;
+            }
+
+
+            

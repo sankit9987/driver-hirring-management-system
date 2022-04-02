@@ -1,6 +1,12 @@
 {% extends 'HEad/base.html' %}
 {% block body %}
-
+{% if messages %}
+    <div id="alert" class="alert" role="alert">
+        {% for msg in messages %}
+        <h3 class="alert-heading">{{msg}}</h3>
+        {% endfor %}
+      </div>
+      {% endif %}
 <div class="height-100 bg-light" style="padding-top: 1rem!important;">
     <div class="col-lg-11 col-xl-12">
         <div class="row my-5">

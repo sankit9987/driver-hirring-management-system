@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block body %}
+{% if b %}
 <table class="table table-striped">
     <thead>
       <tr>
@@ -20,5 +21,8 @@
       {% endfor %}
     </tbody>
   </table>
+  {% else %}
+  <h1 align="center" style="padding-top:10%; color:green;"> No Booking</h1>
 
+  {% endif %}
 {% endblock body %}

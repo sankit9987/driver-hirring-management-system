@@ -45,7 +45,7 @@
                 {% elif request.user.is_driver%}
                 <li><a href="{% url 'driver_dashboard' %}">Dashboard</a></li>
                 {% else %}
-                <li><a href="#Login/Register">Dashboard</a></li>
+                <li><a href="{% url 'my_booking' %}">Dashboard</a></li>
                 {% endif %}
                 <li><a href="{% url 'user_logout' %}">Logout</a></li>
                 
@@ -119,6 +119,7 @@ swiper: swiper,
 });
 }
 </script>
+{% block script %}{% endblock script %}
 </body>
 
 </html>

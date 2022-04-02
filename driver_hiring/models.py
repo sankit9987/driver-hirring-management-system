@@ -48,8 +48,12 @@ typ = (
     ('incity','incity'),
     ('outstation','outstation'),
 )
-class Vehical(models.Model):
+
+class Driver(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class Vehical(models.Model):
+    user = models.ForeignKey(Driver, on_delete=models.CASCADE)
     vehical_image = models.ImageField(upload_to='vehical')
     vehical_no = models.CharField(max_length=100)
     owner_name = models.CharField(max_length=100)
@@ -65,6 +69,7 @@ class Vehical(models.Model):
 
 class Booking(models.Model):
     vehical = models.ForeignKey(Vehical, on_delete=models.CASCADE)   
+    driver = models.ForeignKey(Driver, on_delete=models.CASCADE)   
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     booking_date = models.DateTimeField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)

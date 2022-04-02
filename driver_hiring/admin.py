@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(User)
 admin.site.register(Vehical)
 admin.site.register(Booking)
+admin.site.register(Driver)

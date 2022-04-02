@@ -19,10 +19,11 @@
                    
                 </div>
                 <div class="btn">
-                    <button  style="font-size: 1em;" onclick="return confirm('Are you sure you want to remove')">Book</button>
+                    <button  style="font-size: 1em;" onclick="return confirm('Are you sure you want to book')">Book</button>
                 </div>
             </div>
-            <input type="hidden" name="driver" value="{{v.id}}">
+            <input type="hidden" name="vehicle" value="{{v.id}}">
+            <input type="hidden" name="driver" value="{{v.user.id}}">
         </form>
         {% endfor %}
         
